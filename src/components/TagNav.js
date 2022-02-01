@@ -1,23 +1,26 @@
 import React from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
-import tagObj from "../utils/tagObj";
+import filterObj from "../utils/filterObj";
+import DropDown from "./DropDown";
 
-export default function TagNav() {
-  const { pathname } = useLocation();
+export default function TagNav({ parameter, setParameter, size }) {
   return (
-    <Container id="tagNav" style={{ display: "flex", position: "sticky", top: 0 }}>
-      <StyledDiv borderBottom={pathname === "/"}>
-        <StyledLink to={"/"}>전체</StyledLink>
-      </StyledDiv>
-      {Object.keys(tagObj).map((tag, i) => (
-        <StyledDiv key={i} borderBottom={pathname === `/tag/${tag}`}>
-          <StyledLink to={`/tag/${tag}`}>
-            {tagObj[tag].icon}
-            {tagObj[tag].text}
-          </StyledLink>
-        </StyledDiv>
-      ))}
+    <Container size={size} id="tagNav" style={{ display: "flex", position: "sticky", top: 0 }}>
+      {filterObj.map((filter) => {
+        return (
+          <StyledDiv key={filter.id}>
+            <DropDown
+              size={size}
+              id={filter.id}
+              parameter={parameter}
+              setParameter={setParameter}
+              title={filter.text}
+              data={filter.data}
+            />
+          </StyledDiv>
+        );
+      })}
     </Container>
   );
 }
@@ -28,25 +31,12 @@ const StyledDiv = styled.div`
   justify-content: center;
   border-bottom: ${(props) => props.borderBottom && "4px solid black"};
 `;
-const StyledLink = styled(Link)`
-  text-decoration: none;
-  color: black;
-  font-family: "BM-Air";
-  font-size: 18px;
-  :hover {
-    color: tomato;
-  }
-  /* border-bottom: 3px solid black; */
-`;
+
 const Container = styled.div`
   display: flex;
-  justify-content: center;
   align-items: center;
-  position: sticky;
-  top: 0;
-  height: 65px;
+  height: 55px;
   background-color: #ffffff;
-  gap: 30px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.6);
   border-top: 1px solid rgba(0, 0, 0, 0.6);
   z-index: 99;
