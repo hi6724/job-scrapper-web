@@ -20,7 +20,6 @@ const careerList = [
 ];
 
 export default function DropDown(props) {
-  console.log(props);
   const handleCareer = (min, max) => {
     if (careerMin === "none" && careerMax === "none") {
       if (!personName.includes("2")) {

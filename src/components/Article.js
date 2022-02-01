@@ -13,7 +13,6 @@ import { faSignInAlt, faTimes } from "@fortawesome/free-solid-svg-icons";
 // width: 1000px;
 
 export default function Article(props) {
-  console.log("https://www.jobkorea.co.kr/" + props.link);
   const style = {
     position: "absolute",
     top: props.size === "big" ? "50%" : "50%",
