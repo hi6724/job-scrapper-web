@@ -59,7 +59,12 @@ export default function Article(props) {
             <IconContainer onClick={handleClose} color={colors.red}>
               <FontAwesomeIcon icon={faTimes} size="lg" />
             </IconContainer>
-            <a style={{ color: colors.black }} target="_blank" href={"https://www.jobkorea.co.kr/" + props.link}>
+            <a
+              style={{ color: colors.black }}
+              target="_blank"
+              rel="noreferrer"
+              href={"https://www.jobkorea.co.kr/" + props.link}
+            >
               <IconContainer onClick={handleClose} color={colors.blue}>
                 <FontAwesomeIcon icon={faSignInAlt} size="lg" />
               </IconContainer>
