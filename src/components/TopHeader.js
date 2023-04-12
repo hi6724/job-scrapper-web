@@ -7,7 +7,14 @@ import styled from "styled-components";
 import colors from "../utils/colors";
 import TagNav from "./TagNav";
 
-export default function TopHeader({ setDatas, setTotalPage, setLoading, currentPage, setCurrentPage, size }) {
+export default function TopHeader({
+  setDatas,
+  setTotalPage,
+  setLoading,
+  currentPage,
+  setCurrentPage,
+  size,
+}) {
   const { register, watch, setValue, handleSubmit, getValues } = useForm();
 
   const [parameter, setParameter] = useState([
@@ -24,7 +31,7 @@ export default function TopHeader({ setDatas, setTotalPage, setLoading, currentP
     window.scrollTo({ top: 0 });
     setDatas([]);
     const keyword = getValues("keyword");
-    let URL = `https://job-hunmok.herokuapp.com/search2/${keyword}/${currentPage}`;
+    let URL = `https://job-scrapper.onrender.com//search2/${keyword}/${currentPage}`;
     parameter.map((pp, i) => {
       let temp = "";
       pp.map((p, i) => {
@@ -67,10 +74,17 @@ export default function TopHeader({ setDatas, setTotalPage, setLoading, currentP
             height={size === "big" ? 80 : 0}
           />
         </Logo>
-        <form onSubmit={handleSubmit(onValid)} style={{ display: "flex", borderCollapse: "collapse" }}>
+        <form
+          onSubmit={handleSubmit(onValid)}
+          style={{ display: "flex", borderCollapse: "collapse" }}
+        >
           <div style={{ position: "relative", display: "flex" }}>
             <div style={{ position: "relative" }}>
-              <Input size={size} {...register("keyword")} placeholder="검색어 입력" />
+              <Input
+                size={size}
+                {...register("keyword")}
+                placeholder="검색어 입력"
+              />
               {watch("keyword") && (
                 <Cancel onClick={() => setValue("keyword", "")}>
                   <StyledIcon icon={faTimes} color="gray" />
