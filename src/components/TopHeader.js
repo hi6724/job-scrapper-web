@@ -31,7 +31,7 @@ export default function TopHeader({
     window.scrollTo({ top: 0 });
     setDatas([]);
     const keyword = getValues("keyword");
-    let URL = `https://job-scrapper.onrender.com//search2/${keyword}/${currentPage}`;
+    let URL = `https://job-scrapper.onrender.com/search2/${keyword}/${currentPage}`;
     parameter.map((pp, i) => {
       let temp = "";
       pp.map((p, i) => {
