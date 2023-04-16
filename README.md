@@ -1,70 +1,41 @@
-# Getting Started with Create React App
+# ⭐설계
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+유튜버 노마드코더의 코딩컨테스트에 참가하였습니다 (****2월 14일)****
 
-## Available Scripts
+[https://nomadcoders.co/community/thread/1622](https://nomadcoders.co/community/thread/1622)
 
-In the project directory, you can run:
+주제는 파이썬을 이용해서 스크래핑한 결과를 보여주는 웹사이트를 만드는 것 이었습니다
 
-### `npm start`
+jobkorea사이트의 정보를 python의 django 와 beautifulsoup4 를 통해 스크랩한 후 react로 보여주는 웹사이트를 제작했습니다.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+# 🛠️사용 툴
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### BE
+django, beautifulsoup4
 
-### `npm run build`
+### FE
+react
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# 📝실행화면
 
-### `npm run eject`
+![search.gif](https://github.com/hi6724/job-scrapper-web/raw/master/search.gif)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+홈 화면과 검색하는 모습
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![filter.gif](https://github.com/hi6724/job-scrapper-web/raw/master/filter.gif)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+경력, 학력, 기업형태, 고용형태로 필터링이 가능
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+![seeDetail.gif](https://github.com/hi6724/job-scrapper-web/raw/master/seeDetail.gif)
 
-## Learn More
+자세히 보고 싶은 경우 jobkorea 사이트로 이동
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+# 🌏링크
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[https://nomadjobs.netlify.app/](https://nomadjobs.netlify.app/)
